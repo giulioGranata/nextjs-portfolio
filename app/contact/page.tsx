@@ -4,7 +4,19 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="container mx-auto p-12 space-y-12">
+    <div className="container mx-auto p-12 space-y-16">
+      <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
+        Contact.
+      </h1>
+
+      <p className="text-gray-600 dark:text-gray-300">
+        <a href="mailto:someone@example.com">Send email</a>
+        Get in touch or shoot me an email directly on{" "}
+        <a href="mailto: ggiulio89@gmail.com" className="font-semibold">
+          ggiulio89@gmail.com.
+        </a>
+      </p>
+
       {/* Contact Form */}
       <section className="max-w-2xl mx-auto">
         <form className="space-y-6 bg-gray-100 dark:bg-gray-800 p-8 rounded-xl shadow-md">

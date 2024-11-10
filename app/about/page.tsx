@@ -3,9 +3,13 @@
 const AboutPage: React.FC = () => {
   return (
     <div className="container mx-auto p-12 space-y-16">
+      <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
+        About Me.
+      </h1>
+
       {/* Brief Bio */}
       <section className="space-y-4">
-        <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-200">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
           Who I Am
         </h2>
         <p className="text-gray-600 dark:text-gray-300">
@@ -21,7 +25,7 @@ const AboutPage: React.FC = () => {
 
       {/* Skills Section */}
       <section className="space-y-4">
-        <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-200">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
           Skills & Tools
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -49,7 +53,7 @@ const AboutPage: React.FC = () => {
 
       {/* Values & Philosophy */}
       <section className="space-y-4">
-        <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-200">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
           My Values
         </h2>
         <p className="text-gray-700 dark:text-gray-400">

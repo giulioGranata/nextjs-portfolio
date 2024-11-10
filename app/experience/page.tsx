@@ -1,5 +1,3 @@
-// app/experience/page.tsx
-
 const experiences = [
   {
     id: 1,
@@ -54,7 +52,10 @@ const experiences = [
 
 const ExperiencePage: React.FC = () => {
   return (
-    <div className="py-10 container mx-auto px-5">
+    <div className="container mx-auto p-12 space-y-16">
+      <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
+        Experience.
+      </h1>
       <div className="relative">
         <div
           className="border-r-4 border-black dark:border-white absolute h-full top-0"
