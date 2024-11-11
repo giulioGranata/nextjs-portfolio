@@ -76,7 +76,7 @@ const ExperiencePage: React.FC = () => {
                 <div className="flex items-center">
                   <div className="bg-gray-800 dark:bg-gray-200 z-10 rounded-full border-4 border-black dark:border-white h-5 w-5"></div>
                   <div className="flex-1 ml-4 z-10 font-medium">
-                    <div className="order-1 space-y-2 bg-gray-800 dark:bg-gray-700 rounded-lg shadow-lg transition ease-in-out duration-300 lg:w-5/12 px-6 py-4 group group-hover:bg-gray-700 dark:group-hover:bg-gray-600">
+                    <div className="order-1 space-y-2 bg-gray-800 dark:bg-gray-700 rounded-lg shadow-lg transition ease-in-out duration-300 lg:w-7/12 px-6 py-4 group group-hover:bg-gray-700 dark:group-hover:bg-gray-600">
                       <h3 className="mb-4 font-bold text-white dark:text-gray-100 text-4xl">
                         {company}
                       </h3>

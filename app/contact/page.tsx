@@ -10,7 +10,6 @@ const ContactPage: React.FC = () => {
       </h1>
 
       <p className="text-gray-600 dark:text-gray-300">
-        <a href="mailto:someone@example.com">Send email</a>
         Get in touch or shoot me an email directly on{" "}
         <a href="mailto: ggiulio89@gmail.com" className="font-semibold">
           ggiulio89@gmail.com.
@@ -18,8 +17,8 @@ const ContactPage: React.FC = () => {
       </p>
 
       {/* Contact Form */}
-      <section className="max-w-2xl mx-auto">
-        <form className="space-y-6 bg-gray-100 dark:bg-gray-800 p-8 rounded-xl shadow-md">
+      <section className="max-w-2xl">
+        <form className="space-y-6 py-2 rounded-xl shadow-md">
           <div>
             <input
               type="text"

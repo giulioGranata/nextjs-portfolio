@@ -1,5 +1,7 @@
 // app/about/page.tsx
 
+import Link from "next/link";
+
 const AboutPage: React.FC = () => {
   return (
     <div className="container mx-auto p-12 space-y-16">
@@ -67,12 +69,12 @@ const AboutPage: React.FC = () => {
         <p className="text-lg text-gray-600 dark:text-gray-300">
           Want to collaborate or learn more?
         </p>
-        <a
+        <Link
           href="/contact"
-          className="inline-block mt-4 px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600"
+          className="inline-block mt-4 px-6 py-2 text-white font-semibold rounded-lg  bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600"
         >
           Get in Touch
-        </a>
+        </Link>
       </section>
     </div>
   );
