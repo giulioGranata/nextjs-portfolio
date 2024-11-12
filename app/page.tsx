@@ -2,12 +2,12 @@ const Page: React.FC = () => {
   return (
     <div className="flex flex-col justify-start pt-24">
       <div className="max-w-3xl pl-20">
-        <div className="relative text-5xl font-semibold mb-7 uppercase">
-          <h1 className="text-green-600 absolute left-1.5 top-1 opacity-50">
-            I&apos;m Giulio Granata
-          </h1>
-          <h1 className="text-green-700">I’m Giulio Granata</h1>
-        </div>
+        <h1
+          className="text-4xl font-semibold uppercase glitch mb-7"
+          data-glitch="I’m Giulio Granata"
+        >
+          I’m Giulio Granata
+        </h1>
         <p className="text-lg leading-relaxed mb-4">
           Welcome to my interactive portfolio. I&apos;m a developer passionate
           about technology and design, specializing in web development with{" "}

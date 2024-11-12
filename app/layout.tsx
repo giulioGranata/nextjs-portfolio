@@ -1,23 +1,8 @@
+import Footer from "@/app/components/footer";
 import Navbar from "@/app/components/navbar";
+import "@/app/globals.css";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-const geistFairplayDisplay = localFont({
-  src: "./fonts/GeistPlayfairDisplayVF.woff",
-  variable: "--font-geist-fairplay-display",
-  weight: "100 900",
-});
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Giulio Granata portfolio",
@@ -30,12 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistFairplayDisplay.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />
-        <main className="p-12 min-h-screen">{children}</main>
+    <html lang="en" suppressHydrationWarning>
+      <body className="flex flex-col min-h-screen">
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <Navbar />
+          <main className="flex-1 p-12">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
