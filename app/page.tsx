@@ -1,7 +1,7 @@
 const Page: React.FC = () => {
   return (
-    <div className="flex flex-col justify-start pt-24">
-      <div className="max-w-3xl pl-20">
+    <div className="flex flex-col justify-start pt-6 sm:pt-24">
+      <div className="max-w-3xl px-4 sm:pl-20">
         <h1
           className="text-4xl font-semibold uppercase glitch mb-7"
           data-glitch="I’m Giulio Granata"
