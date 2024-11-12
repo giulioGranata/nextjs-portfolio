@@ -7,7 +7,13 @@ const Navbar: React.FC = () => {
     <nav className="flex justify-between items-center px-12 py-8 bg-transparent dark:text-white light:text-black">
       <div className="text-xl font-bold">
         <Link href="/">
-          <Image src="/gg-logo.png" alt="Logo" width={80} height={80} />
+          <Image
+            src={"/gg-logo.svg"}
+            alt="logo icon"
+            width={100}
+            height={100}
+            className="dark:invert"
+          />
         </Link>
       </div>
       <div className="flex flex-row space-x-8">

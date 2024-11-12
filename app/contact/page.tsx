@@ -4,7 +4,7 @@ const ContactPage: React.FC = () => {
   const email = process.env.NEXT_PUBLIC_EMAIL;
 
   return (
-    <div className="container mx-auto p-12 space-y-16">
+    <div className="container mx-auto space-y-16">
       <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
         Contact.
       </h1>

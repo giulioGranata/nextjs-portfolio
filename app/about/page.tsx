@@ -2,14 +2,26 @@
 
 import Link from "next/link";
 
+const skills = [
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "JavaScript",
+  "TypeScript",
+  "ChakraUI",
+  "Node.js",
+  "Git",
+  "GitHub",
+];
+
 const AboutPage: React.FC = () => {
   return (
-    <div className="container mx-auto p-12 space-y-16">
+    <div className="container mx-auto space-y-16">
       <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
         About Me.
       </h1>
 
-      {/* Brief Bio */}
+      {/* Bio */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
           Who I Am
@@ -25,31 +37,20 @@ const AboutPage: React.FC = () => {
         </p>
       </section>
 
-      {/* Skills Section */}
+      {/* Skills */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
           Skills & Tools
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded text-gray-800 dark:text-gray-100">
-            React
-          </div>
-          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded text-gray-800 dark:text-gray-100">
-            Next.js
-          </div>
-          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded text-gray-800 dark:text-gray-100">
-            TypeScript
-          </div>
-          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded text-gray-800 dark:text-gray-100">
-            Tailwind CSS
-          </div>
-          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded text-gray-800 dark:text-gray-100">
-            Node.js
-          </div>
-          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded text-gray-800 dark:text-gray-100">
-            Git
-          </div>
-          {/* Aggiungi altre skill o strumenti */}
+          {skills.map((skill) => (
+            <div
+              key={skill}
+              className="bg-gray-100 dark:bg-gray-800 p-4 rounded text-gray-800 dark:text-gray-100"
+            >
+              {skill}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -64,7 +65,7 @@ const AboutPage: React.FC = () => {
         </p>
       </section>
 
-      {/* Call to Action */}
+      {/* CTA */}
       <section className="text-center">
         <p className="text-lg text-gray-600 dark:text-gray-300">
           Want to collaborate or learn more?

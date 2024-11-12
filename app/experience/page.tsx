@@ -52,7 +52,7 @@ const experiences = [
 
 const ExperiencePage: React.FC = () => {
   return (
-    <div className="container mx-auto p-12 space-y-16">
+    <div className="container mx-auto space-y-16">
       <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
         Experience.
       </h1>
@@ -74,22 +74,22 @@ const ExperiencePage: React.FC = () => {
             }) => (
               <li key={id} className="mb-5">
                 <div className="flex items-center">
-                  <div className="bg-gray-800 dark:bg-gray-200 z-10 rounded-full border-4 border-black dark:border-white h-5 w-5"></div>
+                  <div className="bg-gray-100 dark:bg-gray-800 z-10 rounded-full border-4 border-black dark:border-white h-5 w-5"></div>
                   <div className="flex-1 ml-4 z-10 font-medium">
-                    <div className="order-1 space-y-2 bg-gray-800 dark:bg-gray-700 rounded-lg shadow-lg transition ease-in-out duration-300 lg:w-7/12 px-6 py-4 group group-hover:bg-gray-700 dark:group-hover:bg-gray-600">
-                      <h3 className="mb-4 font-bold text-white dark:text-gray-100 text-4xl">
+                    <div className="order-1 space-y-2 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg transition ease-in-out duration-300 lg:w-7/12 px-6 py-4 group group-hover:bg-gray-700 dark:group-hover:bg-gray-600">
+                      <h3 className="mb-4 font-bold text-gray-800 dark:text-gray-100 text-4xl">
                         {company}
                       </h3>
-                      <p className="text-lg font-semibold text-gray-100 dark:text-gray-300">
+                      <p className="text-lg font-semibold text-gray-800 dark:text-gray-100">
                         {role}
                       </p>
-                      <p className="text-sm text-gray-100 dark:text-gray-400">
+                      <p className="text-sm text-gray-800 dark:text-gray-100">
                         {`${location} (${startDate} - ${endDate})`}
                       </p>
 
                       <div className="max-h-0 mt-4 overflow-hidden transition-all duration-500 group-hover:max-h-40">
                         <hr className="my-6 border-gray-600 dark:border-gray-500" />
-                        <ul className="text-sm font-medium leading-snug tracking-wide text-gray-300 dark:text-gray-400 text-opacity-100 list-disc pl-5">
+                        <ul className="text-sm font-medium leading-snug tracking-widetext-gray-800 dark:text-gray-100 text-opacity-100 list-disc pl-5">
                           {responsibilities.map((responsibility) => (
                             <li key={responsibility}>{responsibility}</li>
                           ))}
