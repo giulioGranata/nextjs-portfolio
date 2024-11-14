@@ -3,7 +3,7 @@ import Link from "next/link";
 const Error = () => {
   return (
     <>
-      <section className="relative z-10 bg-primary py-[120px]">
+      <section className="relative z-10 py-[120px]">
         <div className="container mx-auto">
           <div className="-mx-4 flex">
             <div className="w-full px-4">
