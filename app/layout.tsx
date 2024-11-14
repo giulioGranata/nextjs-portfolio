@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
-          <main className="flex-1 p-8 sm:p-12">{children}</main>
+          <main className="flex-1 p-8 lg:p-12">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -14,7 +14,7 @@ const skills = [
   "GitHub",
 ];
 
-const AboutPage: React.FC = () => {
+const AboutPage = () => {
   return (
     <div className="container mx-auto space-y-16">
       <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
@@ -46,7 +46,7 @@ const AboutPage: React.FC = () => {
           {skills.map((skill) => (
             <div
               key={skill}
-              className="bg-gray-100 dark:bg-gray-800 p-4 rounded text-gray-800 dark:text-gray-100"
+              className="p-4 rounded bg-gray-100 dark:bg-gray-800"
             >
               {skill}
             </div>

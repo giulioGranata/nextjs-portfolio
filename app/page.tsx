@@ -1,12 +1,12 @@
-const Page: React.FC = () => {
+const Page = () => {
   return (
-    <div className="flex flex-col justify-start pt-6 sm:pt-24">
-      <div className="max-w-3xl px-4 sm:pl-20">
+    <div className="flex flex-col justify-start pt-6 lg:pt-24">
+      <div className="max-w-3xl px-4 lg:pl-20">
         <h1
           className="text-4xl font-semibold uppercase glitch mb-7"
-          data-glitch="I’m Giulio Granata"
+          data-glitch="I'm Giulio Granata"
         >
-          I’m Giulio Granata
+          I&apos;m Giulio Granata
         </h1>
         <p className="text-lg leading-relaxed mb-4">
           Welcome to my interactive portfolio. I&apos;m a developer passionate

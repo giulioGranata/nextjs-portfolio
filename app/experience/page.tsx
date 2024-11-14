@@ -50,7 +50,7 @@ const experiences = [
   },
 ];
 
-const ExperiencePage: React.FC = () => {
+const ExperiencePage = () => {
   return (
     <div className="container mx-auto space-y-16">
       <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">

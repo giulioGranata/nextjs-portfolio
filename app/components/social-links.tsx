@@ -2,13 +2,13 @@
 
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
-const SocialLinks: React.FC = () => {
+const SocialLinks = () => {
   const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
   const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL;
   const email = process.env.NEXT_PUBLIC_EMAIL;
 
   return (
-    <div className="flex justify-center space-x-6 mt-4 text-gray-600 dark:text-gray-300">
+    <div className="flex justify-center space-x-6 mt-4 text-base-content">
       {linkedinUrl && (
         <a
           href={linkedinUrl}

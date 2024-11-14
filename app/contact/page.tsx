@@ -1,6 +1,6 @@
 import ContactForm from "@/app/components/contact-form";
 
-const ContactPage: React.FC = () => {
+const ContactPage = () => {
   const email = process.env.NEXT_PUBLIC_EMAIL;
 
   return (
