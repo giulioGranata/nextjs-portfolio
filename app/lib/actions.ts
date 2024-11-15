@@ -1,3 +1,5 @@
+"use server";
+
 import nodemailer from "nodemailer";
 import { z } from "zod";
 import { FormState } from "./definitions";
