@@ -1,3 +1,5 @@
+import "@/app/style/glitch.css";
+
 const Page = () => {
   return (
     <div className="flex flex-col justify-start pt-6 lg:pt-24">
