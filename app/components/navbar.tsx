@@ -1,11 +1,23 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeSwitcher from "./theme-switcher";
 
 const pages = [
+  {
+    name: "Home",
+    href: "/",
+  },
   {
     name: "About",
     href: "/about",
@@ -25,10 +37,16 @@ const PageList = () => {
   return (
     <>
       {pages.map((page) => (
-        <li key={page.name}>
+        <li key={page.href}>
           <Link
             href={page.href}
-            className={currentPath === page.href ? "active" : ""}
+            className={`
+              ${page.name === "Home" ? "block lg:hidden" : ""}
+              ${
+                currentPath === page.href
+                  ? "font-semibold text-primary"
+                  : "text-muted-foreground"
+              } hover:text-primary transition-colors`}
           >
             {page.name}
           </Link>
@@ -40,64 +58,47 @@ const PageList = () => {
 
 const Navbar = () => {
   return (
-    <>
-      <div className="navbar px-2 lg:hidden">
-        <div className="navbar-start">
-          <div className="dropdown mr-2 z-[2]">
-            <div tabIndex={0} role="button" className="btn btn-ghost">
-              <Image
-                src={"/hamburger-icon.svg"}
-                alt="logo icon"
-                width={24}
-                height={24}
-                className="dark:invert"
-              />
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-white dark:bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
+    <nav className="border-b">
+      <div className="container mx-auto px-4 flex items-center justify-between h-16">
+        <div className="flex-1 flex justify-start lg:flex-none">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="lg:hidden">
+                <MenuIcon />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="opacity-95">
+              <SheetTitle>Menu</SheetTitle>
+              <ul className="flex flex-col space-y-4 mt-8">
+                <PageList />
+              </ul>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        <div className="flex-1 flex justify-center lg:justify-start">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/gg-logo.svg"
+              alt="Giulio Granata"
+              width={48}
+              height={48}
+              className="dark:invert"
+            />
+          </Link>
+        </div>
+
+        <div className="flex-1 flex justify-end">
+          <div className="hidden lg:flex items-center space-x-8 mr-4">
+            <ul className="flex space-x-6">
               <PageList />
             </ul>
           </div>
-        </div>
-        <div className="navbar-center">
-          <Link href="/">
-            <Image
-              src={"/gg-logo.svg"}
-              alt="logo icon"
-              width={100}
-              height={100}
-              className="dark:invert"
-            />
-          </Link>
-        </div>
-        <div className="navbar-end">
           <ThemeSwitcher />
         </div>
       </div>
-      <div className="navbar px-4 hidden lg:flex">
-        <div className="navbar-start">
-          <Link href="/">
-            <Image
-              src={"/gg-logo.svg"}
-              alt="logo icon"
-              width={100}
-              height={100}
-              className="dark:invert"
-            />
-          </Link>
-        </div>
-        <div className="navbar-center">
-          <ul className="menu menu-horizontal px-1">
-            <PageList />
-          </ul>
-        </div>
-        <div className="navbar-end">
-          <ThemeSwitcher />
-        </div>
-      </div>
-    </>
+    </nav>
   );
 };
 

@@ -1,8 +1,11 @@
 import Footer from "@/app/components/footer";
 import Navbar from "@/app/components/navbar";
-import "@/app/style/globals.css";
+import "@/app/styles/global.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Giulio Granata portfolio",
@@ -16,9 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <div className="flex flex-col min-h-screen">
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex flex-col min-h-screen bg-background font-sans antialiased">
             <Navbar />
             <main className="flex-grow p-8 lg:p-12">{children}</main>
             <Footer />
