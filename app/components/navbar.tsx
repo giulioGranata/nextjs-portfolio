@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
@@ -70,6 +71,7 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="left" className="opacity-95">
               <SheetTitle>Menu</SheetTitle>
+              <SheetDescription />
               <ul className="flex flex-col space-y-4 mt-8">
                 <PageList />
               </ul>
