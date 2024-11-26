@@ -95,9 +95,11 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-8 mr-4">
             <ul className="flex space-x-6">
               <PageList />
+              <li>
+                <ThemeSwitcher />
+              </li>
             </ul>
           </div>
-          <ThemeSwitcher />
         </div>
       </div>
     </nav>

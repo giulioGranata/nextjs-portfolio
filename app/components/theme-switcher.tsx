@@ -23,6 +23,7 @@ const ThemeSwitcher = () => {
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+      className="cursor-pointer"
       asChild
     >
       {theme === "dark" ? (
