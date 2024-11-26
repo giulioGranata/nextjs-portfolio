@@ -3,12 +3,14 @@ import Navbar from "@/app/components/navbar";
 import PageTransition from "@/app/components/page-transition";
 import ThemeProvider from "@/app/components/theme-provider";
 import "@/app/styles/global.css";
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Toaster } from "@/components/ui/toaster";
+import { cn } from "@/lib/utils";
 import { AnimatePresence } from "framer-motion";
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 
-const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
+const font = Nunito_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Giulio Granata - Senior Frontend Developer",
@@ -23,11 +25,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${lato.className} animated-background`}>
+      <body className={`${font.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="min-h-screen bg-background/80 backdrop-blur-sm">
+          <div className="flex flex-col min-h-screen bg-background/80 backdrop-blur-sm">
+            <AnimatedGridPattern
+              numSquares={30}
+              maxOpacity={0.1}
+              duration={3}
+              repeatDelay={1}
+              className={cn(
+                "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+                "inset-x-0 inset-y-[-10%] h-[100%] skew-y-12"
+              )}
+            />
             <Navbar />
-            <main className="min-h-screen">
+            <main className="flex-grow">
               <AnimatePresence mode="wait">
                 <PageTransition>{children}</PageTransition>
               </AnimatePresence>
