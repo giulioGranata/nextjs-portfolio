@@ -33,7 +33,7 @@ const ContactForm = () => {
         variant: "destructive",
       });
     }
-  }, [state.success]);
+  }, [state]);
 
   return (
     <form className="space-y-6 rounded-xl" action={formAction}>

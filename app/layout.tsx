@@ -1,12 +1,11 @@
+import { AnimatedPageTransition } from "@/app/components/animated-page-transition";
 import Footer from "@/app/components/footer";
 import Navbar from "@/app/components/navbar";
-import PageTransition from "@/app/components/page-transition";
 import ThemeProvider from "@/app/components/theme-provider";
 import "@/app/styles/global.css";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
-import { AnimatePresence } from "framer-motion";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 
@@ -32,7 +31,6 @@ export default function RootLayout({
               numSquares={30}
               maxOpacity={0.1}
               duration={3}
-              repeatDelay={1}
               className={cn(
                 "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
                 "inset-x-0 inset-y-[-10%] h-[100%] skew-y-12"
@@ -40,9 +38,7 @@ export default function RootLayout({
             />
             <Navbar />
             <main className="flex-grow">
-              <AnimatePresence mode="wait">
-                <PageTransition>{children}</PageTransition>
-              </AnimatePresence>
+              <AnimatedPageTransition>{children}</AnimatedPageTransition>
             </main>
             <Footer />
             <Toaster />
