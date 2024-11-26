@@ -4,7 +4,7 @@ import Navbar from "@/app/components/navbar";
 import ThemeProvider from "@/app/components/theme-provider";
 import "@/app/styles/global.css";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";

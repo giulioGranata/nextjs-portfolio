@@ -2,8 +2,9 @@
 
 import { sendEmail } from "@/app/lib/actions";
 import { FormState } from "@/app/lib/definitions";
-import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
 import { useActionState, useEffect } from "react";
+import { toast } from "sonner";
 
 const initialState: FormState = {
   message: "",
@@ -18,19 +19,18 @@ const ContactForm = () => {
 
   useEffect(() => {
     if (state.success === true) {
-      toast({
-        title: "Success!",
+      toast.success("Success!", {
         description: "Your message has been sent.",
         duration: 3000,
+        position: "top-center",
       });
     }
 
     if (state.success === false) {
-      toast({
-        title: "Error!",
-        description: state.message,
+      toast.error("Error!", {
+        description: "Your message could not be sent.",
         duration: 3000,
-        variant: "destructive",
+        position: "top-center",
       });
     }
   }, [state]);
@@ -74,13 +74,9 @@ const ContactForm = () => {
         />
       </div>
       <div className="flex w-full justify-center lg:justify-end">
-        <button
-          disabled={isPending}
-          type="submit"
-          className="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 transition duration-200"
-        >
+        <Button disabled={isPending} type="submit">
           Send Message
-        </button>
+        </Button>
       </div>
     </form>
   );
