@@ -52,7 +52,7 @@ const experiences = [
 
 const ExperiencePage = () => {
   return (
-    <div className="container mx-auto space-y-16">
+    <div className="container mx-auto px-4 py-8 space-y-12">
       <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
         Experience.
       </h1>

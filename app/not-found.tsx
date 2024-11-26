@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const Error = () => {
@@ -17,12 +18,9 @@ const Error = () => {
                 <p className="mb-8 text-lg text-white">
                   The page you are looking for it maybe deleted
                 </p>
-                <Link
-                  href="/"
-                  className="inline-block mt-4 px-6 py-2 text-white font-semibold rounded-lg  bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600"
-                >
-                  Go To Home
-                </Link>
+                <Button variant="outline" asChild>
+                  <Link href="/">Go To Home</Link>
+                </Button>
               </div>
             </div>
           </div>

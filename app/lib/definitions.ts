@@ -1,7 +1,6 @@
 type FormState = {
   message: string;
-  success: boolean;
-  // errors: { [x: string]: string } | undefined;
+  success: boolean | undefined;
 };
 
 export type { FormState };

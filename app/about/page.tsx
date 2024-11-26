@@ -1,5 +1,6 @@
-// app/about/page.tsx
-
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 
 const skills = [
@@ -12,73 +13,115 @@ const skills = [
   "Node.js",
   "Git",
   "GitHub",
+  "RESTful APIs",
+  "GraphQL",
+  "Responsive Design",
+  "Performance Optimization",
 ];
 
-const AboutPage = () => {
+export default function AboutPage() {
   return (
-    <div className="container mx-auto space-y-16">
-      <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
-        About Me.
-      </h1>
+    <div className="container mx-auto px-4 py-8 space-y-12">
+      <h1 className="text-4xl md:text-5xl font-bold">About Me.</h1>
 
-      {/* Bio */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
-          Who I Am
-        </h2>
-        <p className="text-gray-600 dark:text-gray-300">
-          Hi, I&apos;m Giulio Granata, a passionate Front-End Developer
-          dedicated to building seamless digital experiences.
-        </p>
-        <p className="text-gray-600 dark:text-gray-300">
-          With 10 years of experience in front-end and full-stack development, I
-          specialize in creating user-friendly, high-performance web
-          applications using technologies like Next.js, React, and more.
-        </p>
-      </section>
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Bio */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Who I Am</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p>
+              Ciao! I&apos;m Giulio Granata, a passionate Senior Front-End
+              Developer with 10 years of experience in crafting seamless digital
+              experiences.
+            </p>
+            <p>
+              I specialize in building user-friendly, high-performance web
+              applications using cutting-edge technologies like Next.js, React,
+              and more. My goal is to create intuitive interfaces that not only
+              look great but also provide exceptional user experiences.
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Experience */}
+        <Card>
+          <CardHeader>
+            <CardTitle>My Journey</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p>
+              With a decade of experience in both front-end and full-stack
+              development, I&apos;ve had the privilege of working on diverse
+              projects across various industries.
+            </p>
+            <p>
+              From startups to enterprise-level applications, I&apos;ve honed my
+              skills in creating scalable, maintainable, and efficient code. My
+              experience has taught me the importance of staying adaptable and
+              continuously learning in this ever-evolving field.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
 
       {/* Skills */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
-          Skills & Tools
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="p-4 rounded bg-gray-100 dark:bg-gray-800"
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
-      </section>
+      <Card>
+        <CardHeader>
+          <CardTitle>Skills & Tools</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-row flex-wrap gap-2">
+            {skills.map((skill) => (
+              <Badge key={skill} variant="secondary">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Values & Philosophy */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
-          My Values
-        </h2>
-        <p className="text-gray-700 dark:text-gray-400">
-          I believe in creating user-centric designs, writing clean and
-          efficient code, and continuously learning to improve my skills.
-        </p>
-      </section>
+      <Card>
+        <CardHeader>
+          <CardTitle>My Values</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p>
+            I believe in creating user-centric designs, writing clean and
+            efficient code, and continuously learning to improve my skills.
+          </p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              User-Centric Design: Prioritizing intuitive and accessible
+              interfaces.
+            </li>
+            <li>
+              Clean Code: Writing maintainable and efficient code for long-term
+              success.
+            </li>
+            <li>
+              Continuous Learning: Staying updated with the latest technologies
+              and best practices.
+            </li>
+            <li>
+              Collaboration: Working effectively in cross-functional teams to
+              achieve common goals.
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
 
       {/* CTA */}
-      <section className="text-center">
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Want to collaborate or learn more?
+      <div className="text-center">
+        <p className="text-lg mb-4">
+          Interested in collaborating or want to learn more about my work?
         </p>
-        <Link
-          href="/contact"
-          className="inline-block mt-4 px-6 py-2 text-white font-semibold rounded-lg  bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600"
-        >
-          Get in Touch
-        </Link>
-      </section>
+        <Button asChild>
+          <Link href="/contact">Get in Touch</Link>
+        </Button>
+      </div>
     </div>
   );
-};
-
-export default AboutPage;
+}

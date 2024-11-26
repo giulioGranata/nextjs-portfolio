@@ -25,9 +25,9 @@ const Page = () => {
           Feel free to reach out for collaborations or any questions!
         </p>
         <div className="flex space-x-4">
-          <Button asChild>
+          {/* <Button asChild>
             <Link href="/projects">View My Projects</Link>
-          </Button>
+          </Button> */}
           <Button variant="outline" asChild>
             <Link href="/contact">Contact Me</Link>
           </Button>

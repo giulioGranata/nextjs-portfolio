@@ -2,11 +2,12 @@
 
 import { sendEmail } from "@/app/lib/actions";
 import { FormState } from "@/app/lib/definitions";
-import { useActionState } from "react";
+import { toast } from "@/hooks/use-toast";
+import { useActionState, useEffect } from "react";
 
 const initialState: FormState = {
   message: "",
-  success: false,
+  success: undefined,
 };
 
 const ContactForm = () => {
@@ -15,8 +16,27 @@ const ContactForm = () => {
     initialState
   );
 
+  useEffect(() => {
+    if (state.success === true) {
+      toast({
+        title: "Success!",
+        description: "Your message has been sent.",
+        duration: 3000,
+      });
+    }
+
+    if (state.success === false) {
+      toast({
+        title: "Error!",
+        description: state.message,
+        duration: 3000,
+        variant: "destructive",
+      });
+    }
+  }, [state.success]);
+
   return (
-    <form className="space-y-6 py-2 rounded-xl" action={formAction}>
+    <form className="space-y-6 rounded-xl" action={formAction}>
       <div>
         <input
           type="text"
@@ -62,18 +82,6 @@ const ContactForm = () => {
           Send Message
         </button>
       </div>
-
-      {state.success && (
-        <div className="flex w-full justify-center lg:justify-end">
-          <p className="text-green-600 dark:text-green-500">{state.message}</p>
-        </div>
-      )}
-
-      {state.success === false && (
-        <div className="flex w-full justify-center lg:justify-end">
-          <p className="text-red-600 dark:text-red-500">{state.message}</p>
-        </div>
-      )}
     </form>
   );
 };
