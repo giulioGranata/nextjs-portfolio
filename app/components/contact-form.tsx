@@ -9,6 +9,7 @@ import { toast } from "sonner";
 const initialState: FormState = {
   message: "",
   success: undefined,
+  timeStamp: 0,
 };
 
 const ContactForm = () => {
@@ -20,7 +21,7 @@ const ContactForm = () => {
   useEffect(() => {
     if (state.success === true) {
       toast.success("Success!", {
-        description: "Your message has been sent.",
+        description: state.message,
         duration: 3000,
         position: "top-center",
       });
@@ -28,7 +29,7 @@ const ContactForm = () => {
 
     if (state.success === false) {
       toast.error("Error!", {
-        description: "Your message could not be sent.",
+        description: state.message,
         duration: 3000,
         position: "top-center",
       });

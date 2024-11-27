@@ -31,7 +31,8 @@ export async function sendEmail(prevState: FormState, formData: FormData) {
   if (!validation.success) {
     return {
       success: false,
-      message: "Email validation failed!",
+      message: "Email validation failed",
+      timeStamp: Date.now(),
     };
   }
 
@@ -52,9 +53,17 @@ export async function sendEmail(prevState: FormState, formData: FormData) {
 
   try {
     await transporter.sendMail(mailOptions);
-    return { success: true, message: "Email sent successfully" };
+    return {
+      success: true,
+      message: "Email sent successfully",
+      timeStamp: Date.now(),
+    };
   } catch (error) {
     console.error(error);
-    return { success: false, message: "Failed to send email" };
+    return {
+      success: false,
+      message: "Failed to send email",
+      timeStamp: Date.now(),
+    };
   }
 }
