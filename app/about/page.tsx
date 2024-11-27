@@ -7,16 +7,16 @@ const skills = [
   "React",
   "Next.js",
   "Tailwind CSS",
+  "Storybook",
   "JavaScript",
   "TypeScript",
-  "ChakraUI",
   "Node.js",
   "Git",
   "GitHub",
   "RESTful APIs",
-  "GraphQL",
   "Responsive Design",
   "Performance Optimization",
+  "Design Systems",
 ];
 
 export default function AboutPage() {
