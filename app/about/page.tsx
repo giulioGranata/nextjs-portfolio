@@ -6,73 +6,52 @@ import Link from "next/link";
 const skills = [
   "React",
   "Next.js",
-  "Tailwind CSS",
-  "Storybook",
-  "JavaScript",
   "TypeScript",
+  "JavaScript",
+  "Tailwind CSS",
   "Node.js",
+  "REST APIs",
   "Git",
-  "GitHub",
-  "RESTful APIs",
+  "CI/CD",
   "Responsive Design",
   "Performance Optimization",
-  "Design Systems",
+  "Accessibility",
+  "State Management (Redux, Zustand)",
 ];
 
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-8 space-y-12">
-      <h1 className="text-4xl md:text-5xl font-bold">About Me.</h1>
-
-      <div className="grid md:grid-cols-2 gap-8">
-        {/* Bio */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Who I Am</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p>
-              Ciao! I&apos;m Giulio Granata, a passionate Senior Front-End
-              Developer with 10 years of experience in crafting seamless digital
-              experiences.
-            </p>
-            <p>
-              I specialize in building user-friendly, high-performance web
-              applications using cutting-edge technologies like Next.js, React,
-              and more. My goal is to create intuitive interfaces that not only
-              look great but also provide exceptional user experiences.
-            </p>
-          </CardContent>
-        </Card>
-
-        {/* Experience */}
-        <Card>
-          <CardHeader>
-            <CardTitle>My Journey</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p>
-              With a decade of experience in both front-end and full-stack
-              development, I&apos;ve had the privilege of working on diverse
-              projects across various industries.
-            </p>
-            <p>
-              From startups to enterprise-level applications, I&apos;ve honed my
-              skills in creating scalable, maintainable, and efficient code. My
-              experience has taught me the importance of staying adaptable and
-              continuously learning in this ever-evolving field.
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Skills */}
+      <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
+        About me.
+      </h1>
       <Card>
         <CardHeader>
-          <CardTitle>Skills & Tools</CardTitle>
+          <CardTitle>Who am I?</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-row flex-wrap gap-2">
+          <p className="mb-4">
+            Ciao! I&apos;m Giulio Granata, a passionate Senior Frontend
+            Developer with 10 years of experience in crafting seamless digital
+            experiences. I specialize in building user-friendly,
+            high-performance web applications using cutting-edge technologies.
+          </p>
+          <p>
+            My journey in web development has led me through various challenges
+            and exciting projects, from startups to enterprise-level
+            applications. I&apos;m dedicated to creating intuitive interfaces
+            that not only look great but also provide exceptional user
+            experiences.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Skills & Expertise</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-wrap gap-2">
             {skills.map((skill) => (
               <Badge key={skill} variant="secondary">
                 {skill}
@@ -82,15 +61,14 @@ export default function AboutPage() {
         </CardContent>
       </Card>
 
-      {/* Values & Philosophy */}
       <Card>
         <CardHeader>
           <CardTitle>My Values</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <p>
-            I believe in creating user-centric designs, writing clean and
-            efficient code, and continuously learning to improve my skills.
+            As a developer, I&apos;m guided by a set of core values that shape
+            my approach to work and collaboration:
           </p>
           <ul className="list-disc list-inside space-y-2">
             <li>
@@ -109,15 +87,15 @@ export default function AboutPage() {
               Collaboration: Working effectively in cross-functional teams to
               achieve common goals.
             </li>
+            <li>
+              Problem Solving: Approaching challenges with creativity and
+              persistence.
+            </li>
           </ul>
         </CardContent>
       </Card>
 
-      {/* CTA */}
       <div className="text-center">
-        <p className="text-lg mb-4">
-          Interested in collaborating or want to learn more about my work?
-        </p>
         <Button asChild>
           <Link href="/contact">Get in Touch</Link>
         </Button>
