@@ -1,8 +1,8 @@
 "use client";
 
+import PageTransition from "@/components/page-transition";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import PageTransition from "./page-transition";
 
 export function AnimatedPageTransition({
   children,

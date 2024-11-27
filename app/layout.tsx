@@ -1,8 +1,8 @@
-import { AnimatedPageTransition } from "@/app/components/animated-page-transition";
-import Footer from "@/app/components/footer";
-import Navbar from "@/app/components/navbar";
-import ThemeProvider from "@/app/components/theme-provider";
 import "@/app/styles/global.css";
+import { AnimatedPageTransition } from "@/components/animated-page-transition";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import ThemeProvider from "@/components/theme-provider";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
@@ -12,9 +12,8 @@ import { Nunito_Sans } from "next/font/google";
 const font = Nunito_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
-  title: "Giulio Granata - Senior Frontend Developer",
-  description:
-    "Giulio Granata's portfolio, a Senior Frontend Developer specialized in React and Next.js",
+  title: "Giulio Granata - Portfolio",
+  description: "Senior Frontend Developer specialized in React and Next.js",
 };
 
 export default function RootLayout({

@@ -1,4 +1,4 @@
-import ContactForm from "@/app/components/contact-form";
+import ContactForm from "@/components/contact-form";
 
 const ContactPage = () => {
   const email = process.env.NEXT_PUBLIC_EMAIL;
