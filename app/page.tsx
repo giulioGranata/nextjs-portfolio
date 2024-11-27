@@ -24,9 +24,14 @@ const Page = () => {
         <p className="text-lg leading-relaxed mb-6">
           Feel free to reach out for collaborations or any questions!
         </p>
-        <Button asChild>
-          <Link href="/contact">Get in Touch</Link>
-        </Button>
+        <div className="flex space-x-4">
+          <Button asChild>
+            <Link href="/contact">Get in Touch</Link>
+          </Button>
+          <Button asChild variant="outline" className="ml-4">
+            <Link href="/about">Learn More</Link>
+          </Button>
+        </div>
       </div>
     </div>
   );
