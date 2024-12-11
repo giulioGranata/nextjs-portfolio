@@ -63,17 +63,15 @@ const ExperiencePage = () => {
       </div>
     ),
     content: (
-      <div className="space-y-4">
+      <div className="space-y-4 text-md leading-relaxed">
         <h3 className="text-lg font-semibold">{exp.role}</h3>
-        <p className="text-muted-foreground text-sm">
+        <p className="text-muted-foreground">
           {exp.company}, {exp.location}
         </p>
-        <h4 className="font-medium text-sm">Responsibilities:</h4>
+        <h4 className="font-medium ">Responsibilities:</h4>
         <ul className="list-disc ml-6 space-y-2">
           {exp.responsibilities.map((item, index) => (
-            <li key={index} className="text-sm">
-              {item}
-            </li>
+            <li key={index}>{item}</li>
           ))}
         </ul>
       </div>
