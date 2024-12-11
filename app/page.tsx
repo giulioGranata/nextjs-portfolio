@@ -12,16 +12,16 @@ const Page = () => {
         >
           I&apos;m Giulio Granata
         </h1>
-        <p className="text-lg leading-relaxed mb-4">
+        <p className="text-lg leading-8 mb-4">
           Welcome to my interactive portfolio. I&apos;m a developer passionate
           about technology and design, specializing in web development with{" "}
           <strong>React</strong> and <strong>Next.js</strong>.
         </p>
-        <p className="text-lg leading-relaxed mb-4">
+        <p className="text-lg leading-8 mb-4">
           Explore the site to learn more about me, my experiences, and how I can
           help bring unique and performant digital projects to life.
         </p>
-        <p className="text-lg leading-relaxed mb-6">
+        <p className="text-lg leading-8 mb-6">
           Feel free to reach out for collaborations or any questions!
         </p>
         <div className="flex space-x-4">

@@ -25,12 +25,12 @@ export default function AboutPage() {
       <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200">
         About me.
       </h1>
-      <Card>
+      <Card className="text-lg leading-8">
         <CardHeader>
-          <CardTitle>Who am I?</CardTitle>
+          <CardTitle className="font-bold">Who am I?</CardTitle>
         </CardHeader>
-        <CardContent>
-          <p className="mb-4">
+        <CardContent className="space-y-4">
+          <p>
             Ciao! I&apos;m Giulio Granata, a passionate Senior Frontend
             Developer with 10 years of experience in crafting seamless digital
             experiences. I specialize in building user-friendly,
@@ -46,14 +46,14 @@ export default function AboutPage() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="text-lg leading-8">
         <CardHeader>
-          <CardTitle>Skills & Expertise</CardTitle>
+          <CardTitle className="font-bold">Skills & Expertise</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {skills.map((skill) => (
-              <Badge key={skill} variant="secondary">
+              <Badge key={skill} variant="secondary" className="text-lg">
                 {skill}
               </Badge>
             ))}
@@ -61,9 +61,9 @@ export default function AboutPage() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="text-lg leading-8">
         <CardHeader>
-          <CardTitle>My Values</CardTitle>
+          <CardTitle className="font-bold">My Values</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <p>
@@ -96,7 +96,7 @@ export default function AboutPage() {
       </Card>
 
       <div className="text-center">
-        <Button asChild>
+        <Button asChild size="lg" className="text-lg">
           <Link href="/contact">Get in Touch</Link>
         </Button>
       </div>
