@@ -70,8 +70,8 @@ const ExperiencePage = () => {
         </p>
         <h4 className="font-medium">Responsibilities:</h4>
         <ul className="list-disc ml-6 space-y-2">
-          {exp.responsibilities.map((item, index) => (
-            <li key={index}>{item}</li>
+          {exp.responsibilities.map((item) => (
+            <li key={item}>{item}</li>
           ))}
         </ul>
       </div>
